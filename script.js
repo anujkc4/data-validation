@@ -11,6 +11,28 @@ form.addEventListener("submit", (event) => {
   Validate();
 });
 
+// last display after form successfuly submit
+const displaySuccessmsg = (username, email, phone, password, cpassword) => {
+  let formco = document.getElementsByClassName("form-control");
+  let count = 0;
+
+  for (let i = 0; i < formco.length; i++) {
+    if (formco[i].classList.contains("success")) {
+      count++;
+    }
+  }
+
+  if (count === formco.length) {
+    username.value = "";
+    email.value = "";
+    phone.value = "";
+    password.value = "";
+    cpassword.value = "";
+    alert("Successfully submitted!");
+    location.href = "demo.html";
+  }
+};
+
 // Main validation function
 const Validate = () => {
   const usernameval = username.value.trim();
@@ -67,6 +89,8 @@ const Validate = () => {
   } else {
     setSuccessmsg(cpassword);
   }
+
+  displaySuccessmsg(username, email, phone, password, cpassword);
 };
 
 // Function to show error
