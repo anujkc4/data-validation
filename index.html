@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>regestration form</h2>
+      </div>
+      <form action="#" class="form" id="form">
+        <div class="form-control">
+          <label>Username:</label>
+          <input type="text" id="username" placeholder="enter your name" />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error msg</small>
+        </div>
+
+        <div class="form-control">
+          <label>email:</label>
+          <input type="email" id="email" placeholder="enter your email" />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error msg</small>
+        </div>
+
+        <div class="form-control">
+          <label>phone no:</label>
+          <input type="number" id="phone" placeholder="enter your phone no" />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error msg</small>
+        </div>
+
+        <div class="form-control">
+          <label>password:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="enter your password"
+          />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error msg</small>
+        </div>
+
+        <div class="form-control">
+          <label>confirm password:</label>
+          <input
+            type="password"
+            id="cpassword"
+            placeholder="enter your conform password"
+          />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error msg</small>
+        </div>
+        <input type="submit" value="submit" class="btn" />
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- Data validation is the process of ensuring that data is accurate, complete, and adheres to predefined rules before it is used, stored, or processed -->
