@@ -39,16 +39,6 @@ const Validate = () => {
     setSuccessmsg(email);
   }
 
-  // Email validation function
-  const isemail = (emailval) => {
-    var atsymbol = emailval.indexOf("@");
-    if (atsymbol < 1) return false;
-    var dot = emailval.lastIndexOf(".");
-    if (dot <= atsymbol + 2) return false;
-    if (dot === emailval.length - 1) return false;
-    return true; // return true if email passes all checks
-  };
-
   // Validation of phone no
   if (phoneval === "") {
     setErrormsg(phone, "phone cannot be blank");
@@ -72,6 +62,8 @@ const Validate = () => {
     setErrormsg(cpassword, "confirm password cannot be blank");
   } else if (cpasswordval !== passwordval) {
     setErrormsg(cpassword, "confirm password should be match with password");
+  } else if (cpasswordval.length < 8) {
+    setErrormsg(cpassword, "minimum eight characters require");
   } else {
     setSuccessmsg(cpassword);
   }
@@ -90,3 +82,13 @@ function setSuccessmsg(input) {
   const formControl = input.parentElement;
   formControl.className = "form-control success";
 }
+
+// Email validation function
+const isemail = (emailval) => {
+  var atsymbol = emailval.indexOf("@");
+  if (atsymbol < 1) return false;
+  var dot = emailval.lastIndexOf(".");
+  if (dot <= atsymbol + 2) return false;
+  if (dot === emailval.length - 1) return false;
+  return true; // return true if email passes all checks
+};
