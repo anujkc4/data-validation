@@ -11,16 +11,6 @@ form.addEventListener("submit", (event) => {
   Validate();
 });
 
-// Email validation function
-const isemail = (emailval) => {
-  var atsymbol = emailval.indexOf("@");
-  if (atsymbol < 1) return false;
-  var dot = emailval.lastIndexOf(".");
-  if (dot <= atsymbol + 2) return false;
-  if (dot === emailval.length - 1) return false;
-  return true; // return true if email passes all checks
-};
-
 // Main validation function
 const Validate = () => {
   const usernameval = username.value.trim();
@@ -48,6 +38,16 @@ const Validate = () => {
   } else {
     setSuccessmsg(email);
   }
+
+  // Email validation function
+  const isemail = (emailval) => {
+    var atsymbol = emailval.indexOf("@");
+    if (atsymbol < 1) return false;
+    var dot = emailval.lastIndexOf(".");
+    if (dot <= atsymbol + 2) return false;
+    if (dot === emailval.length - 1) return false;
+    return true; // return true if email passes all checks
+  };
 
   // Validation of phone no
   if (phoneval === "") {
